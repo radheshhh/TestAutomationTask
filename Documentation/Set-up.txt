@@ -1,0 +1,68 @@
+Prerequisite Installation
+    1) Java (latest Version)
+    2) Node.js
+    3) Visual Studio Code
+
+Project Setup and WebdriverIO Installation
+Step 1 – Create a new folder and open in VS Code
+Step 2 – Navigate to new folder and Open terminal in VS Code and run Following commands.
+            1.	Npm init -y
+            2.	npm init wdio
+
+Step 3 – Select the option as required and install.
+            •	Ok to proceed? (y) y
+            •	A project named "qa-technical-task" was detected at "*\* \*\*", correct? 
+                Select: Yes
+            •	What type of testing would you like to do? 
+                Select: E2E Testing - of Web or Mobile Applications
+            •	Where is your automation backend located? 
+                Select: On my local machine
+            •	Which environment you would like to automate? 
+                Select: Web - web applications in the browser
+            •	With which browser should we start? 
+                Select: Chrome
+            •	Which framework do you want to use? 
+                Select: Mocha (https://mochajs.org/)
+            •	Do you want to use a compiler? 
+                Select: No!
+            •	Do you want WebdriverIO to autogenerate some test files? 
+            	Select: Yes
+            •	What should be the location of your spec files? 
+                Confirm and Click on Enter
+            •	Do you want to use page objects (https://martinfowler.com/bliki/PageObject.html)? 
+                Select: Yes
+            •	Where are your page objects located?
+                Confirm and Click on Enter
+            •	Which reporter do you want to use? 
+                Select : spec and allure
+            •	Do you want to add a plugin to your test setup?
+                Click on Enter
+            •	Would you like to include Visual Testing to your setup? For more information see https://webdriver.io/docs/visual-testing! 
+                Select: Yes
+            •	Do you want to add a service to your test setup? 
+                Select: visual
+            •	Do you want me to run `npm install`
+                Select: Yes
+            3.	npx run wido wdio.conf.js
+            4.	pnx wdio run wdio.conf.js
+            5.	npx wdio run wdio.conf.js
+
+Step 4 - To run existing tests.
+            1.	Parallel execution
+                npx wdio run .\wdio.conf.js <Particular Script Path>
+            2.	Specific test case execution
+                npx wdio run .\wdio.conf.js –spec <Particular Script Path>
+
+To Generate and View Reports
+Step 1 (Optional) - Run – npm install @wdio/allure-reporter –save-dev
+Step 2 (Optional) - Add reporter config in wdio.conf.js
+Step 3 (Optional) - Run test and check Allure Results folder is generated
+Step 4 - To install allure report or result
+            1.	npm i allure-commandline
+            2.	npm i -g allure-commandline
+Step 5 – Run commands to generate reports and open
+            1.	allure generate .\allure-results\
+            2.	allure open
+            3.	allure --clean .\allure-results\ (To clean-up report)
+            
+For API  : 1. npm i axios
